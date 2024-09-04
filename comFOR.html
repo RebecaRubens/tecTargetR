@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Letra 'A'</title>
+</head>
+<body>
+    <h1>Verificador de Letra 'A'</h1> <br><br>
+    Digite uma palavra: <input type="text" id="string">
+    <button onclick="verificar()">Verificar</button>
+    <div id="resultado"></div>
+
+    <script>
+        function verificar() {
+            var string = document.getElementById('string').value;
+            var cont = 0;
+
+            for (var i = 0; i < string.length; i++) {
+                if (string[i] === 'a' || string[i] === 'A') {
+                    cont++;
+                }
+            }
+
+            if (cont > 0) {
+                document.getElementById('resultado').innerHTML = "A letra 'A' aparece " + cont + " vez(es) na palavra.";
+            } else {
+                document.getElementById('resultado').innerHTML = "A letra 'A' não foi encontrada na palavra.";
+            }
+        }
+    </script>
+</body>
+</html>
